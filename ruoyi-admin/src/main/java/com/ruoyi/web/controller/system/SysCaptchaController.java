@@ -8,6 +8,8 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.ruoyi.common.utils.TzCodeUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -60,8 +62,11 @@ public class SysCaptchaController extends BaseController
             }
             else if ("char".equals(type))
             {
-                capStr = code = captchaProducer.createText();
-                bi = captchaProducer.createImage(capStr);
+//                capStr = code = captchaProducer.createText();
+//                bi = captchaProducer.createImage(capStr);
+                TzCodeUtil util=new TzCodeUtil();
+                capStr = code =util.createCode();
+                bi=util.getBuffImg();
             }
             session.setAttribute(Constants.KAPTCHA_SESSION_KEY, code);
             out = response.getOutputStream();

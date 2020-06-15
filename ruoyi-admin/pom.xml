@@ -78,6 +78,17 @@
             <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-generator</artifactId>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.ruoyi</groupId>-->
+<!--            <artifactId>ruoyi-spider</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>ruoyi-appAdmin</artifactId>
+        </dependency>
+
         
     </dependencies>
 

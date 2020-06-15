@@ -202,8 +202,21 @@
 	            <artifactId>ruoyi-common</artifactId>
 	            <version>${ruoyi.version}</version>
 	        </dependency>
-	        
+
+<!--			<dependency>-->
+<!--				<groupId>com.ruoyi</groupId>-->
+<!--				<artifactId>ruoyi-spider</artifactId>-->
+<!--				<version>${ruoyi.version}</version>-->
+<!--			</dependency>-->
+
+			<dependency>
+				<groupId>com.ruoyi</groupId>
+				<artifactId>ruoyi-appAdmin</artifactId>
+				<version>${ruoyi.version}</version>
+			</dependency>
+
         </dependencies>
+
     </dependencyManagement>
 
     <modules>
@@ -213,6 +226,9 @@
 		<module>ruoyi-quartz</module>
 		<module>ruoyi-generator</module>
         <module>ruoyi-common</module>
+		<module>ruoyi-bookApp</module>
+<!--		<module>ruoyi-spider</module>-->
+		<module>ruoyi-appAdmin</module>
     </modules>
     <packaging>pom</packaging>
 

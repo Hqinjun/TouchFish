@@ -85,3 +85,11 @@
 ## 若依交流群
 
 QQ群： [![加入QQ群](https://img.shields.io/badge/已满-1389287-blue.svg)](https://jq.qq.com/?_wv=1027&k=5HBAaYN)  [![加入QQ群](https://img.shields.io/badge/已满-1679294-blue.svg)](https://jq.qq.com/?_wv=1027&k=5cHeRVW)  [![加入QQ群](https://img.shields.io/badge/已满-1529866-blue.svg)](https://jq.qq.com/?_wv=1027&k=53R0L5Z)  [![加入QQ群](https://img.shields.io/badge/已满-1772718-blue.svg)](https://jq.qq.com/?_wv=1027&k=5g75dCU)  [![加入QQ群](https://img.shields.io/badge/已满-1366522-blue.svg)](https://jq.qq.com/?_wv=1027&k=58cPoHA)  [![加入QQ群](https://img.shields.io/badge/已满-1382251-blue.svg)](https://jq.qq.com/?_wv=1027&k=5Ofd4Pb)  [![加入QQ群](https://img.shields.io/badge/已满-1145125-blue.svg)](https://jq.qq.com/?_wv=1027&k=5yugASz)  [![加入QQ群](https://img.shields.io/badge/已满-86752435-blue.svg)](https://jq.qq.com/?_wv=1027&k=5Rf3d2P)  [![加入QQ群](https://img.shields.io/badge/已满-134072510-blue.svg)](https://jq.qq.com/?_wv=1027&k=5ZIjaeP)  [![加入QQ群](https://img.shields.io/badge/已满-210336300-blue.svg)](https://jq.qq.com/?_wv=1027&k=5CJw1jY)  [![加入QQ群](https://img.shields.io/badge/339522636-blue.svg)](https://jq.qq.com/?_wv=1027&k=5omzbKc)
+
+## 在若依的基础上二次开发
+一方面学习，另一方面想写一个属于自己的网站，并将遇到的问题以及项目写成博客。
+
+打烊前的最后一杯!  欢乐时光 （TouchFish） 就要开始了。
+
+20200609：初步想法：文章书本阅读，支持小说阅读，文学书籍，英语文章阅读。功能会参考[起点文学](https://www.qidian.com/) 和扇贝阅读。因为是个人开发产品设计不可能太成熟，主要自己个人的经历为主。商业盈利方面设计也是不可能完善的。
+我喜欢起点文学中小说设计每一章节的每一段都是可以评论。因为用的自己的空余时间，精力有限，以移动端为主。自己还有很多想法，喜欢看漫画，看直播，希望自己能坚持下去。

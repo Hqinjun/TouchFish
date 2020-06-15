@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.app.mapper.AppUserMapper">
+
+    <resultMap type="AppUser" id="AppUserResult">
+        <result property="id"    column="id"    />
+        <result property="username"    column="username"    />
+        <result property="password"    column="password"    />
+        <result property="phone"    column="phone"    />
+        <result property="nickName"    column="nick_name"    />
+        <result property="userPhoto"    column="user_photo"    />
+        <result property="userSex"    column="user_sex"    />
+        <result property="accountBalance"    column="account_balance"    />
+        <result property="status"    column="status"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectAppUserVo">
+        select id, username, password, phone, nick_name, user_photo, user_sex, account_balance, status, create_time, update_time from app_user
+    </sql>
+
+    <select id="selectAppUserList" parameterType="AppUser" resultMap="AppUserResult">
+        <include refid="selectAppUserVo"/>
+        <where>
+            <if test="username != null  and username != ''"> and username like concat('%', #{username}, '%')</if>
+            <if test="password != null  and password != ''"> and password = #{password}</if>
+            <if test="phone != null  and phone != ''"> and phone = #{phone}</if>
+            <if test="nickName != null  and nickName != ''"> and nick_name like concat('%', #{nickName}, '%')</if>
+            <if test="userPhoto != null  and userPhoto != ''"> and user_photo = #{userPhoto}</if>
+            <if test="userSex != null "> and user_sex = #{userSex}</if>
+            <if test="accountBalance != null "> and account_balance = #{accountBalance}</if>
+            <if test="status != null "> and status = #{status}</if>
+        </where>
+    </select>
+
+    <select id="selectAppUserById" parameterType="Long" resultMap="AppUserResult">
+        <include refid="selectAppUserVo"/>
+        where id = #{id}
+    </select>
+
+    <insert id="insertAppUser" parameterType="AppUser" useGeneratedKeys="true" keyProperty="id">
+        insert into app_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="username != null and username != ''">username,</if>
+            <if test="password != null and password != ''">password,</if>
+            <if test="phone != null and phone != ''">phone,</if>
+            <if test="nickName != null">nick_name,</if>
+            <if test="userPhoto != null">user_photo,</if>
+            <if test="userSex != null">user_sex,</if>
+            <if test="accountBalance != null">account_balance,</if>
+            <if test="status != null">status,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateTime != null">update_time,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="username != null and username != ''">#{username},</if>
+            <if test="password != null and password != ''">#{password},</if>
+            <if test="phone != null and phone != ''">#{phone},</if>
+            <if test="nickName != null">#{nickName},</if>
+            <if test="userPhoto != null">#{userPhoto},</if>
+            <if test="userSex != null">#{userSex},</if>
+            <if test="accountBalance != null">#{accountBalance},</if>
+            <if test="status != null">#{status},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+        </trim>
+    </insert>
+
+    <update id="updateAppUser" parameterType="AppUser">
+        update app_user
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="username != null and username != ''">username = #{username},</if>
+            <if test="password != null and password != ''">password = #{password},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="nickName != null">nick_name = #{nickName},</if>
+            <if test="userPhoto != null">user_photo = #{userPhoto},</if>
+            <if test="userSex != null">user_sex = #{userSex},</if>
+            <if test="accountBalance != null">account_balance = #{accountBalance},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteAppUserById" parameterType="Long">
+        delete from app_user where id = #{id}
+    </delete>
+
+    <delete id="deleteAppUserByIds" parameterType="String">
+        delete from app_user where id in
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
